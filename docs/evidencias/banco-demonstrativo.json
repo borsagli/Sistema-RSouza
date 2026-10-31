@@ -1,0 +1,137 @@
+{
+  "segments": [
+    {
+      "id": 1,
+      "name": "Oficinas de ônibus",
+      "description": "Manutenção de frotas e reparadores especializados."
+    },
+    {
+      "id": 2,
+      "name": "Transportadoras",
+      "description": "Empresas de transporte de passageiros."
+    },
+    {
+      "id": 3,
+      "name": "Clientes avulsos",
+      "description": "Compradores ocasionais de peças."
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "name": "Oficina Horizonte (fictícia)",
+      "phone": "5531999990001",
+      "segment_id": 1,
+      "consent": 1,
+      "active": 1,
+      "created_at": "2026-10-31T22:39:35.082Z"
+    },
+    {
+      "id": 2,
+      "name": "Garagem Via Sul (fictícia)",
+      "phone": "5531999990002",
+      "segment_id": 1,
+      "consent": 1,
+      "active": 1,
+      "created_at": "2026-10-31T22:39:35.082Z"
+    },
+    {
+      "id": 3,
+      "name": "Transportes Aurora (fictícia)",
+      "phone": "5531999990003",
+      "segment_id": 2,
+      "consent": 1,
+      "active": 1,
+      "created_at": "2026-10-31T22:39:35.082Z"
+    },
+    {
+      "id": 4,
+      "name": "Cliente sem consentimento (fictício)",
+      "phone": "5531999990004",
+      "segment_id": 1,
+      "consent": 0,
+      "active": 1,
+      "created_at": "2026-10-31T22:39:35.082Z"
+    },
+    {
+      "id": 5,
+      "name": "Oficina Estrela (fictícia)",
+      "phone": "5531999990005",
+      "segment_id": 1,
+      "consent": 1,
+      "active": 1,
+      "created_at": "2026-10-31T22:42:50.443Z"
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "title": "Semana da manutenção",
+      "message": "Olá, {nome}! A R Souza Auto Peças tem condições especiais em filtros, pastilhas e peças para ônibus. Responda para consultar disponibilidade e solicitar um orçamento. Material acadêmico demonstrativo, sem oferta comercial real.",
+      "image_url": ""
+    },
+    {
+      "id": 2,
+      "title": "Revisão da frota",
+      "message": "Olá, {nome}! Planeje a revisão da sua frota com a A R Souza Auto Peças. Consulte nossa equipe sobre peças para ônibus. Mensagem demonstrativa.",
+      "image_url": ""
+    }
+  ],
+  "campaigns": [
+    {
+      "id": 1,
+      "name": "Promoção para oficinas — demonstração",
+      "segment_id": 1,
+      "material_id": 1,
+      "scheduled_at": null,
+      "status": "completed",
+      "created_at": "2026-10-31T22:39:35.082Z",
+      "executed_at": "2026-10-31T22:43:21.868Z"
+    },
+    {
+      "id": 2,
+      "name": "Revisão das transportadoras — demonstração",
+      "segment_id": 2,
+      "material_id": 2,
+      "scheduled_at": "2026-11-01T14:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-10-31T22:44:11.474Z",
+      "executed_at": null
+    }
+  ],
+  "deliveries": [
+    {
+      "id": 1,
+      "campaign_id": 1,
+      "client_id": 1,
+      "recipient_name": "Oficina Horizonte (fictícia)",
+      "recipient_phone": "5531999990001",
+      "message": "Olá, Oficina Horizonte (fictícia)! A R Souza Auto Peças tem condições especiais em filtros, pastilhas e peças para ônibus. Responda para consultar disponibilidade e solicitar um orçamento. Material acadêmico demonstrativo, sem oferta comercial real.",
+      "simulated_at": "2026-10-31T22:43:21.868Z",
+      "response": "pending",
+      "notes": ""
+    },
+    {
+      "id": 2,
+      "campaign_id": 1,
+      "client_id": 2,
+      "recipient_name": "Garagem Via Sul (fictícia)",
+      "recipient_phone": "5531999990002",
+      "message": "Olá, Garagem Via Sul (fictícia)! A R Souza Auto Peças tem condições especiais em filtros, pastilhas e peças para ônibus. Responda para consultar disponibilidade e solicitar um orçamento. Material acadêmico demonstrativo, sem oferta comercial real.",
+      "simulated_at": "2026-10-31T22:43:21.868Z",
+      "response": "pending",
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "campaign_id": 1,
+      "client_id": 5,
+      "recipient_name": "Oficina Estrela (fictícia)",
+      "recipient_phone": "5531999990005",
+      "message": "Olá, Oficina Estrela (fictícia)! A R Souza Auto Peças tem condições especiais em filtros, pastilhas e peças para ônibus. Responda para consultar disponibilidade e solicitar um orçamento. Material acadêmico demonstrativo, sem oferta comercial real.",
+      "simulated_at": "2026-10-31T22:43:21.868Z",
+      "response": "interested",
+      "notes": "Resposta fictícia para apresentação: solicitou orçamento de filtros para a frota."
+    }
+  ]
+}

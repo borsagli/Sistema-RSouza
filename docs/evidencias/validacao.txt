@@ -1,0 +1,32 @@
+
+> sistema-rsouza@1.0.0 test
+> node --test tests/*.test.js
+
+✔ autenticação, cookie protegido, origem e logout (222.878332ms)
+✔ limite de tentativas de login (407.500974ms)
+✔ CRUD, validação e integridade relacional (94.666905ms)
+✔ simulação segmentada, consentimento, histórico e respostas (91.611803ms)
+✔ agendamento, cancelamento e execução idempotente após retomada (84.329091ms)
+✔ campanha sem destinatários e persistência após reabrir o banco (24.459546ms)
+✔ servidor executa uma campanha automaticamente no intervalo do agendador (10317.916522ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11402.521785
+
+> sistema-rsouza@1.0.0 build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 23 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.47 kB │ gzip:  0.30 kB
+dist/assets/index-DDvpQ-NF.css   11.06 kB │ gzip:  3.27 kB
+dist/assets/index-EZBKHNfo.js   245.88 kB │ gzip: 75.62 kB
+✓ built in 910ms
