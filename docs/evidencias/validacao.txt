@@ -1,0 +1,39 @@
+
+> sistema-rsouza@1.0.0 test
+> node --test tests/*.test.js
+
+✔ autenticação, limite de tentativas, origem e logout (550.816958ms)
+✔ CLIENTE: CNPJ, e-mail único, limites, telefones e perfil 1:1 (104.107074ms)
+✔ segmentação combina interesse, preferência e limites inclusivos de gasto (98.820325ms)
+✔ FUNCIONARIO: especialização total/disjunta e supervisão sem ciclos (89.452323ms)
+✔ CAMPANHA: responsável, clientes/canais obrigatórios, chave fraca, cancelamento e histórico (116.806869ms)
+✔ RECEBE e INTERACAO: simulação, datas, atendente, múltiplas interações e publicações por canal (120.009285ms)
+✔ canais e publicações: CRUD e canal deve estar no relacionamento UTILIZA (93.755759ms)
+✔ agendamento usa status Ativo/Inativo, é idempotente e ignora campanhas inativas (77.61636ms)
+Backup integral antes da migração: /tmp/rsouza-migration-QILqGc/legacy.sqlite.before-mer-2026-11-01T21-52-53.509Z.sqlite
+Migração MER concluída. CNPJs/e-mails gerados são fictícios; gastos iniciados em zero. Campos antigos sem correspondência estão no backup JSON.
+Backup integral antes da migração: /tmp/rsouza-rollback-TsGhac/legacy.sqlite.before-mer-2026-11-01T21-52-53.557Z.sqlite
+✔ migração transacional com backup integral, CNPJ fictício, histórico e reabertura idempotente (52.719552ms)
+✔ migração incompatível preserva banco antigo e não cria esquema parcial (40.288313ms)
+✔ servidor executa uma campanha automaticamente no intervalo do agendador (14884.623693ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16523.359168
+
+> sistema-rsouza@1.0.0 build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 23 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.47 kB │ gzip:  0.30 kB
+dist/assets/index-8aMy8Abe.css   11.94 kB │ gzip:  3.47 kB
+dist/assets/index-BaYN47Oj.js   258.63 kB │ gzip: 78.68 kB
+✓ built in 1.17s

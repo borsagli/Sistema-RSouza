@@ -1,0 +1,257 @@
+{
+  "CLIENTE": [
+    {
+      "CNPJ": "00000001000136",
+      "razao_social": "Garagem Horizonte (fictícia)",
+      "nome_fantasia": "Horizonte — garagem demonstrativa",
+      "email": "garagem-1@example.invalid",
+      "rua": "Rua Demonstrativa",
+      "numero": "1",
+      "bairro": "Lindéia",
+      "cidade": "Belo Horizonte",
+      "pais": "Brasil",
+      "cep": "30000000",
+      "total_gasto": 12500
+    },
+    {
+      "CNPJ": "00000002000180",
+      "razao_social": "Garagem Via Sul (fictícia)",
+      "nome_fantasia": "Garagem Via Sul (fictícia)",
+      "email": "garagem-2@example.invalid",
+      "rua": "Rua Demonstrativa",
+      "numero": "2",
+      "bairro": "Lindéia",
+      "cidade": "Belo Horizonte",
+      "pais": "Brasil",
+      "cep": "30000000",
+      "total_gasto": 5400
+    },
+    {
+      "CNPJ": "00000003000125",
+      "razao_social": "Transportes Aurora (fictícia)",
+      "nome_fantasia": "Transportes Aurora (fictícia)",
+      "email": "garagem-3@example.invalid",
+      "rua": "Rua Demonstrativa",
+      "numero": "3",
+      "bairro": "Lindéia",
+      "cidade": "Belo Horizonte",
+      "pais": "Brasil",
+      "cep": "30000000",
+      "total_gasto": 21000
+    }
+  ],
+  "PERFIL_CLIENTE": [
+    {
+      "CNPJ_CLIENTE": "00000001000136"
+    },
+    {
+      "CNPJ_CLIENTE": "00000002000180"
+    },
+    {
+      "CNPJ_CLIENTE": "00000003000125"
+    }
+  ],
+  "CLIENTE_TELEFONE": [
+    {
+      "CNPJ_CLIENTE": "00000002000180",
+      "numero": "5531999990002",
+      "tipo": "Móvel"
+    },
+    {
+      "CNPJ_CLIENTE": "00000003000125",
+      "numero": "5531999990003",
+      "tipo": "Móvel"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "numero": "553133330001",
+      "tipo": "Fixo"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "numero": "5531999990001",
+      "tipo": "Móvel"
+    }
+  ],
+  "CLIENTE_INTERESSE": [
+    {
+      "CNPJ_CLIENTE": "00000002000180",
+      "interesse": "Filtros"
+    },
+    {
+      "CNPJ_CLIENTE": "00000003000125",
+      "interesse": "Suspensão"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "interesse": "Filtros"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "interesse": "Freios"
+    }
+  ],
+  "CLIENTE_PREFERENCIA": [
+    {
+      "CNPJ_CLIENTE": "00000002000180",
+      "preferencia": "WhatsApp"
+    },
+    {
+      "CNPJ_CLIENTE": "00000003000125",
+      "preferencia": "Catálogo"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "preferencia": "Promoções"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "preferencia": "WhatsApp"
+    }
+  ],
+  "FUNCIONARIO": [
+    {
+      "ID_FUNCIONARIO": 1,
+      "nome": "Supervisão comercial (fictícia)",
+      "especializacao": "RESPONSAVEL_DIVULGACAO",
+      "ID_RESPONSAVEL": 1,
+      "ID_ATENDENTE": null
+    },
+    {
+      "ID_FUNCIONARIO": 2,
+      "nome": "Divulgação de ofertas (fictícia)",
+      "especializacao": "RESPONSAVEL_DIVULGACAO",
+      "ID_RESPONSAVEL": 2,
+      "ID_ATENDENTE": null
+    },
+    {
+      "ID_FUNCIONARIO": 3,
+      "nome": "Atendimento WhatsApp (fictício)",
+      "especializacao": "ATENDENTE_WHATSAPP",
+      "ID_RESPONSAVEL": null,
+      "ID_ATENDENTE": 3
+    }
+  ],
+  "RESPONSAVEL_DIVULGACAO": [
+    {
+      "ID_RESPONSAVEL": 1,
+      "ID_SUPERVISOR": null
+    },
+    {
+      "ID_RESPONSAVEL": 2,
+      "ID_SUPERVISOR": 1
+    }
+  ],
+  "ATENDENTE_WHATSAPP": [
+    {
+      "ID_ATENDENTE": 3
+    }
+  ],
+  "CAMPANHA": [
+    {
+      "ID_CAMPANHA": 1,
+      "ID_RESPONSAVEL": 2,
+      "titulo_oferta": "Semana da manutenção — demonstração",
+      "texto_mensagem": "Olá, {nome}! Consulte filtros e freios para sua frota na A R Souza Auto Peças. Oferta e mensagem exclusivamente demonstrativas.",
+      "envio_mensagens": "Agendada",
+      "data_agendamento": "2026-11-01T23:00:00.000Z",
+      "status": "Ativo"
+    },
+    {
+      "ID_CAMPANHA": 2,
+      "ID_RESPONSAVEL": 2,
+      "titulo_oferta": "Oferta segmentada para garagens — demonstração",
+      "texto_mensagem": "Olá, {nome}! Consulte nossas ofertas demonstrativas de filtros para sua frota.",
+      "envio_mensagens": "Simulada",
+      "data_agendamento": null,
+      "status": "Ativo"
+    }
+  ],
+  "RECEBE": [
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "ID_CAMPANHA": 2,
+      "data_envio": "2026-11-01T15:46:06.225Z",
+      "status_envio": "Enviado",
+      "data_visualizacao": null
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "ID_CAMPANHA": 1,
+      "data_envio": null,
+      "status_envio": "Pendente",
+      "data_visualizacao": null
+    },
+    {
+      "CNPJ_CLIENTE": "00000002000180",
+      "ID_CAMPANHA": 1,
+      "data_envio": null,
+      "status_envio": "Pendente",
+      "data_visualizacao": null
+    }
+  ],
+  "CANAL_DIVULGACAO": [
+    {
+      "ID_CANAL": 1,
+      "nome": "WhatsApp Business",
+      "tipo": "Demonstrativo"
+    },
+    {
+      "ID_CANAL": 2,
+      "nome": "Catálogo digital",
+      "tipo": "Demonstrativo"
+    }
+  ],
+  "UTILIZA": [
+    {
+      "ID_CAMPANHA": 2,
+      "ID_CANAL": 1
+    },
+    {
+      "ID_CAMPANHA": 2,
+      "ID_CANAL": 2
+    },
+    {
+      "ID_CAMPANHA": 1,
+      "ID_CANAL": 1
+    }
+  ],
+  "PUBLICACAO_CANAL": [
+    {
+      "ID_PUBLICACAO": 1,
+      "ID_CAMPANHA": 2,
+      "ID_CANAL": 1,
+      "data_publicacao": "2026-11-01",
+      "horario": "15:46:06",
+      "conteudo": "Olá, {nome}! Consulte nossas ofertas demonstrativas de filtros para sua frota."
+    },
+    {
+      "ID_PUBLICACAO": 2,
+      "ID_CAMPANHA": 2,
+      "ID_CANAL": 2,
+      "data_publicacao": "2026-11-01",
+      "horario": "15:46:06",
+      "conteudo": "Olá, {nome}! Consulte nossas ofertas demonstrativas de filtros para sua frota."
+    }
+  ],
+  "PECA_DIVULGACAO": [
+    {
+      "ID_CAMPANHA": 1,
+      "numero_peca": 1,
+      "tipo": "Panfleto demonstrativo",
+      "nome_arquivo": "oferta-filtros.png",
+      "formato": "PNG"
+    }
+  ],
+  "INTERACAO_WHATSAPP": [
+    {
+      "ID_INTERACAO": 1,
+      "CNPJ_CLIENTE": "00000001000136",
+      "ID_CAMPANHA": 2,
+      "ID_ATENDENTE": 3,
+      "data_hora": "2026-11-01T15:47:40.711Z",
+      "tipo_interacao": "Resposta demonstrativa",
+      "status": "Interessado"
+    }
+  ]
+}
