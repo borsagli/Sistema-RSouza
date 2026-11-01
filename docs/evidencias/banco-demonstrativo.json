@@ -1,137 +1,257 @@
 {
-  "segments": [
+  "CLIENTE": [
     {
-      "id": 1,
-      "name": "Oficinas de ônibus",
-      "description": "Manutenção de frotas e reparadores especializados."
+      "CNPJ": "00000001000136",
+      "razao_social": "Garagem Horizonte (fictícia)",
+      "nome_fantasia": "Horizonte — garagem demonstrativa",
+      "email": "garagem-1@example.invalid",
+      "rua": "Rua Demonstrativa",
+      "numero": "1",
+      "bairro": "Lindéia",
+      "cidade": "Belo Horizonte",
+      "pais": "Brasil",
+      "cep": "30000000",
+      "total_gasto": 12500
     },
     {
-      "id": 2,
-      "name": "Transportadoras",
-      "description": "Empresas de transporte de passageiros."
+      "CNPJ": "00000002000180",
+      "razao_social": "Garagem Via Sul (fictícia)",
+      "nome_fantasia": "Garagem Via Sul (fictícia)",
+      "email": "garagem-2@example.invalid",
+      "rua": "Rua Demonstrativa",
+      "numero": "2",
+      "bairro": "Lindéia",
+      "cidade": "Belo Horizonte",
+      "pais": "Brasil",
+      "cep": "30000000",
+      "total_gasto": 5400
     },
     {
-      "id": 3,
-      "name": "Clientes avulsos",
-      "description": "Compradores ocasionais de peças."
+      "CNPJ": "00000003000125",
+      "razao_social": "Transportes Aurora (fictícia)",
+      "nome_fantasia": "Transportes Aurora (fictícia)",
+      "email": "garagem-3@example.invalid",
+      "rua": "Rua Demonstrativa",
+      "numero": "3",
+      "bairro": "Lindéia",
+      "cidade": "Belo Horizonte",
+      "pais": "Brasil",
+      "cep": "30000000",
+      "total_gasto": 21000
     }
   ],
-  "clients": [
+  "PERFIL_CLIENTE": [
     {
-      "id": 1,
-      "name": "Oficina Horizonte (fictícia)",
-      "phone": "5531999990001",
-      "segment_id": 1,
-      "consent": 1,
-      "active": 1,
-      "created_at": "2026-10-31T22:39:35.082Z"
+      "CNPJ_CLIENTE": "00000001000136"
     },
     {
-      "id": 2,
-      "name": "Garagem Via Sul (fictícia)",
-      "phone": "5531999990002",
-      "segment_id": 1,
-      "consent": 1,
-      "active": 1,
-      "created_at": "2026-10-31T22:39:35.082Z"
+      "CNPJ_CLIENTE": "00000002000180"
     },
     {
-      "id": 3,
-      "name": "Transportes Aurora (fictícia)",
-      "phone": "5531999990003",
-      "segment_id": 2,
-      "consent": 1,
-      "active": 1,
-      "created_at": "2026-10-31T22:39:35.082Z"
-    },
-    {
-      "id": 4,
-      "name": "Cliente sem consentimento (fictício)",
-      "phone": "5531999990004",
-      "segment_id": 1,
-      "consent": 0,
-      "active": 1,
-      "created_at": "2026-10-31T22:39:35.082Z"
-    },
-    {
-      "id": 5,
-      "name": "Oficina Estrela (fictícia)",
-      "phone": "5531999990005",
-      "segment_id": 1,
-      "consent": 1,
-      "active": 1,
-      "created_at": "2026-10-31T22:42:50.443Z"
+      "CNPJ_CLIENTE": "00000003000125"
     }
   ],
-  "materials": [
+  "CLIENTE_TELEFONE": [
     {
-      "id": 1,
-      "title": "Semana da manutenção",
-      "message": "Olá, {nome}! A R Souza Auto Peças tem condições especiais em filtros, pastilhas e peças para ônibus. Responda para consultar disponibilidade e solicitar um orçamento. Material acadêmico demonstrativo, sem oferta comercial real.",
-      "image_url": ""
+      "CNPJ_CLIENTE": "00000002000180",
+      "numero": "5531999990002",
+      "tipo": "Móvel"
     },
     {
-      "id": 2,
-      "title": "Revisão da frota",
-      "message": "Olá, {nome}! Planeje a revisão da sua frota com a A R Souza Auto Peças. Consulte nossa equipe sobre peças para ônibus. Mensagem demonstrativa.",
-      "image_url": ""
+      "CNPJ_CLIENTE": "00000003000125",
+      "numero": "5531999990003",
+      "tipo": "Móvel"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "numero": "553133330001",
+      "tipo": "Fixo"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "numero": "5531999990001",
+      "tipo": "Móvel"
     }
   ],
-  "campaigns": [
+  "CLIENTE_INTERESSE": [
     {
-      "id": 1,
-      "name": "Promoção para oficinas — demonstração",
-      "segment_id": 1,
-      "material_id": 1,
-      "scheduled_at": null,
-      "status": "completed",
-      "created_at": "2026-10-31T22:39:35.082Z",
-      "executed_at": "2026-10-31T22:43:21.868Z"
+      "CNPJ_CLIENTE": "00000002000180",
+      "interesse": "Filtros"
     },
     {
-      "id": 2,
-      "name": "Revisão das transportadoras — demonstração",
-      "segment_id": 2,
-      "material_id": 2,
-      "scheduled_at": "2026-11-01T14:00:00.000Z",
-      "status": "scheduled",
-      "created_at": "2026-10-31T22:44:11.474Z",
-      "executed_at": null
+      "CNPJ_CLIENTE": "00000003000125",
+      "interesse": "Suspensão"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "interesse": "Filtros"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "interesse": "Freios"
     }
   ],
-  "deliveries": [
+  "CLIENTE_PREFERENCIA": [
     {
-      "id": 1,
-      "campaign_id": 1,
-      "client_id": 1,
-      "recipient_name": "Oficina Horizonte (fictícia)",
-      "recipient_phone": "5531999990001",
-      "message": "Olá, Oficina Horizonte (fictícia)! A R Souza Auto Peças tem condições especiais em filtros, pastilhas e peças para ônibus. Responda para consultar disponibilidade e solicitar um orçamento. Material acadêmico demonstrativo, sem oferta comercial real.",
-      "simulated_at": "2026-10-31T22:43:21.868Z",
-      "response": "pending",
-      "notes": ""
+      "CNPJ_CLIENTE": "00000002000180",
+      "preferencia": "WhatsApp"
     },
     {
-      "id": 2,
-      "campaign_id": 1,
-      "client_id": 2,
-      "recipient_name": "Garagem Via Sul (fictícia)",
-      "recipient_phone": "5531999990002",
-      "message": "Olá, Garagem Via Sul (fictícia)! A R Souza Auto Peças tem condições especiais em filtros, pastilhas e peças para ônibus. Responda para consultar disponibilidade e solicitar um orçamento. Material acadêmico demonstrativo, sem oferta comercial real.",
-      "simulated_at": "2026-10-31T22:43:21.868Z",
-      "response": "pending",
-      "notes": ""
+      "CNPJ_CLIENTE": "00000003000125",
+      "preferencia": "Catálogo"
     },
     {
-      "id": 3,
-      "campaign_id": 1,
-      "client_id": 5,
-      "recipient_name": "Oficina Estrela (fictícia)",
-      "recipient_phone": "5531999990005",
-      "message": "Olá, Oficina Estrela (fictícia)! A R Souza Auto Peças tem condições especiais em filtros, pastilhas e peças para ônibus. Responda para consultar disponibilidade e solicitar um orçamento. Material acadêmico demonstrativo, sem oferta comercial real.",
-      "simulated_at": "2026-10-31T22:43:21.868Z",
-      "response": "interested",
-      "notes": "Resposta fictícia para apresentação: solicitou orçamento de filtros para a frota."
+      "CNPJ_CLIENTE": "00000001000136",
+      "preferencia": "Promoções"
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "preferencia": "WhatsApp"
+    }
+  ],
+  "FUNCIONARIO": [
+    {
+      "ID_FUNCIONARIO": 1,
+      "nome": "Supervisão comercial (fictícia)",
+      "especializacao": "RESPONSAVEL_DIVULGACAO",
+      "ID_RESPONSAVEL": 1,
+      "ID_ATENDENTE": null
+    },
+    {
+      "ID_FUNCIONARIO": 2,
+      "nome": "Divulgação de ofertas (fictícia)",
+      "especializacao": "RESPONSAVEL_DIVULGACAO",
+      "ID_RESPONSAVEL": 2,
+      "ID_ATENDENTE": null
+    },
+    {
+      "ID_FUNCIONARIO": 3,
+      "nome": "Atendimento WhatsApp (fictício)",
+      "especializacao": "ATENDENTE_WHATSAPP",
+      "ID_RESPONSAVEL": null,
+      "ID_ATENDENTE": 3
+    }
+  ],
+  "RESPONSAVEL_DIVULGACAO": [
+    {
+      "ID_RESPONSAVEL": 1,
+      "ID_SUPERVISOR": null
+    },
+    {
+      "ID_RESPONSAVEL": 2,
+      "ID_SUPERVISOR": 1
+    }
+  ],
+  "ATENDENTE_WHATSAPP": [
+    {
+      "ID_ATENDENTE": 3
+    }
+  ],
+  "CAMPANHA": [
+    {
+      "ID_CAMPANHA": 1,
+      "ID_RESPONSAVEL": 2,
+      "titulo_oferta": "Semana da manutenção — demonstração",
+      "texto_mensagem": "Olá, {nome}! Consulte filtros e freios para sua frota na A R Souza Auto Peças. Oferta e mensagem exclusivamente demonstrativas.",
+      "envio_mensagens": "Agendada",
+      "data_agendamento": "2026-11-01T23:00:00.000Z",
+      "status": "Ativo"
+    },
+    {
+      "ID_CAMPANHA": 2,
+      "ID_RESPONSAVEL": 2,
+      "titulo_oferta": "Oferta segmentada para garagens — demonstração",
+      "texto_mensagem": "Olá, {nome}! Consulte nossas ofertas demonstrativas de filtros para sua frota.",
+      "envio_mensagens": "Simulada",
+      "data_agendamento": null,
+      "status": "Ativo"
+    }
+  ],
+  "RECEBE": [
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "ID_CAMPANHA": 2,
+      "data_envio": "2026-11-01T15:46:06.225Z",
+      "status_envio": "Enviado",
+      "data_visualizacao": null
+    },
+    {
+      "CNPJ_CLIENTE": "00000001000136",
+      "ID_CAMPANHA": 1,
+      "data_envio": null,
+      "status_envio": "Pendente",
+      "data_visualizacao": null
+    },
+    {
+      "CNPJ_CLIENTE": "00000002000180",
+      "ID_CAMPANHA": 1,
+      "data_envio": null,
+      "status_envio": "Pendente",
+      "data_visualizacao": null
+    }
+  ],
+  "CANAL_DIVULGACAO": [
+    {
+      "ID_CANAL": 1,
+      "nome": "WhatsApp Business",
+      "tipo": "Demonstrativo"
+    },
+    {
+      "ID_CANAL": 2,
+      "nome": "Catálogo digital",
+      "tipo": "Demonstrativo"
+    }
+  ],
+  "UTILIZA": [
+    {
+      "ID_CAMPANHA": 2,
+      "ID_CANAL": 1
+    },
+    {
+      "ID_CAMPANHA": 2,
+      "ID_CANAL": 2
+    },
+    {
+      "ID_CAMPANHA": 1,
+      "ID_CANAL": 1
+    }
+  ],
+  "PUBLICACAO_CANAL": [
+    {
+      "ID_PUBLICACAO": 1,
+      "ID_CAMPANHA": 2,
+      "ID_CANAL": 1,
+      "data_publicacao": "2026-11-01",
+      "horario": "15:46:06",
+      "conteudo": "Olá, {nome}! Consulte nossas ofertas demonstrativas de filtros para sua frota."
+    },
+    {
+      "ID_PUBLICACAO": 2,
+      "ID_CAMPANHA": 2,
+      "ID_CANAL": 2,
+      "data_publicacao": "2026-11-01",
+      "horario": "15:46:06",
+      "conteudo": "Olá, {nome}! Consulte nossas ofertas demonstrativas de filtros para sua frota."
+    }
+  ],
+  "PECA_DIVULGACAO": [
+    {
+      "ID_CAMPANHA": 1,
+      "numero_peca": 1,
+      "tipo": "Panfleto demonstrativo",
+      "nome_arquivo": "oferta-filtros.png",
+      "formato": "PNG"
+    }
+  ],
+  "INTERACAO_WHATSAPP": [
+    {
+      "ID_INTERACAO": 1,
+      "CNPJ_CLIENTE": "00000001000136",
+      "ID_CAMPANHA": 2,
+      "ID_ATENDENTE": 3,
+      "data_hora": "2026-11-01T15:47:40.711Z",
+      "tipo_interacao": "Resposta demonstrativa",
+      "status": "Interessado"
     }
   ]
 }

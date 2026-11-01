@@ -43,20 +43,23 @@ test('servidor executa uma campanha automaticamente no intervalo do agendador', 
   const cookie = login.headers.get('set-cookie').split(';')[0];
   const response = await fetch(base + 'campaigns', {
     method: 'POST', headers: { 'Content-Type': 'application/json', Cookie: cookie },
-    body: JSON.stringify({ name: 'Teste do relógio real', segment_id: 1, material_id: 1, status: 'scheduled', scheduled_at: new Date(Date.now() + 1000).toISOString() }),
+    body: JSON.stringify({ ID_RESPONSAVEL: 2, titulo_oferta: 'Teste do relógio real', texto_mensagem: 'Mensagem demonstrativa',
+      status: 'Ativo', envio_mensagens: 'Agendada', canais: [1], filtros: { interesse: 'Filtros' },
+      data_agendamento: new Date(Date.now() + 1000).toISOString() }),
   });
   assert.equal(response.status, 201);
-  const { id } = await response.json();
+  const { ID_CAMPANHA: id } = await response.json();
   const deadline = Date.now() + 16_000;
   let campaign;
   do {
     await delay(500);
     const response = await fetch(base + 'campaigns', { headers: { Cookie: cookie } });
     assert.equal(response.status, 200);
-    campaign = (await response.json()).find(item => item.id === id);
-  } while (campaign.status !== 'completed' && Date.now() < deadline);
-  assert.equal(campaign.status, 'completed');
-  assert.equal(campaign.recipients, 2);
-  const deliveries = await fetch(base + 'deliveries', { headers: { Cookie: cookie } });
-  assert.equal((await deliveries.json()).length, 2);
+    campaign = (await response.json()).find(item => item.ID_CAMPANHA === id);
+  } while (campaign.envio_mensagens !== 'Simulada' && Date.now() < deadline);
+  assert.equal(campaign.status, 'Ativo');
+  assert.equal(campaign.envio_mensagens, 'Simulada');
+  assert.equal(campaign.simulados, 2);
+  const receives = await fetch(base + 'receives', { headers: { Cookie: cookie } });
+  assert.equal((await receives.json()).filter(row => row.status_envio === 'Enviado').length, 2);
 });
